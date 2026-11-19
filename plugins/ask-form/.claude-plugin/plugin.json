@@ -1,0 +1,1 @@
+{ "name": "ask-form", "version": "0.1.0", "description": "Claudeが質問フォーム（入力欄・ラジオ・チェック・プルダウン）を右側のタブに生成し、回答を受け取る", "license": "MIT", "types": "./types/index.d.ts" }

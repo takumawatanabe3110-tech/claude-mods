@@ -1,0 +1,7 @@
+{
+  "name": "claude-mods",
+  "owner": { "name": "claude-mods" },
+  "plugins": [
+    { "name": "ask-form", "source": "./plugins/ask-form", "description": "Claudeが質問フォームを右側のタブに生成し、回答を受け取る" }
+  ]
+}
