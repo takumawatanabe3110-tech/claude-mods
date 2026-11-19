@@ -103,7 +103,12 @@ export const register: Register = on => {
       status: 'open',
     }
     await update($, forms, list => [...list.filter(f => f.status === 'open'), form].slice(-20))
-    await $.ui.open({ id: PANE_PREFIX + id, title, focus: true })
+    const opened = await $.ui.open({ id: PANE_PREFIX + id, title, focus: true })
+    if (!opened.isPlaced) {
+      return {
+        result: `フォーム「${title}」(form_id: ${id}) を開きましたが、いまの画面ではタブが表示されていません（この画面はModのパネル表示に対応していない可能性があります）。表示できる画面で開くと現れます。ユーザーには、使っているアプリと、右側のパネルが見えているかを確認してください。`,
+      }
+    }
     return {
       result: `フォーム「${title}」(form_id: ${id}) を右側のタブに表示しました。ユーザーの回答を待つため、ここでターンを終えてください。`,
     }
