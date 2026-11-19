@@ -7,5 +7,5 @@ Claudeがユーザーに質問するとき、画面右側の新しいタブに�
 
 ### インストール
 ```
-/plugin install ask-form --marketplace <owner>/claude-mods
+/plugin install ask-form --marketplace takumawatanabe3110-tech/claude-mods
 ```
